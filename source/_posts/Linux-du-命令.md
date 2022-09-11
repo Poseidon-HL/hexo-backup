@@ -26,5 +26,6 @@ Linux du 命令用于查看目录或文件的大小
    du -h --max-depth=N {{path/to/directory}}
 
  - List the human-readable size of all .jpg files in subdirectories of the current directory, and show a cumulative total at the end:
+   du -ch {{*/*.jpg}}
 
 ```
