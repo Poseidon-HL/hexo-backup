@@ -6,7 +6,7 @@ tags:
  - 广度优先搜索
  - 并查集
  - 图
-categories: 
+categories: 剑指 Offer II
 ---
 
 # [剑指 Offer II 118\. 多余的边](https://leetcode.cn/problems/7LpjUW/)
@@ -60,6 +60,11 @@ Related Topics: [深度优先搜索](https://leetcode.cn/tag/depth-first-search/
 Language: **C++**
 
 ```c++
+class Solution {
+public:
+    vector<int> father;
+    int findFather(int i) {
+        if (i == father[i]) {
             return i;
         } else {
             int f = findFather(father[i]);
