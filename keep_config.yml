@@ -6,7 +6,7 @@ base_info:
   author: 浩澜
   url: https://keep.xpoet.cn/
   # Logo image (You can use local image, image external link or don’t fill)
-  logo_img: /images/image.png
+  logo_img: https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/image.49ib3ymiu280.webp
 # ---------------------------------------------------------------------------------------
 # Theme style settings
 # ---------------------------------------------------------------------------------------
@@ -15,10 +15,10 @@ style:
   primary_color: "#0066CC"
 
   # Avatar (You can use local image or image external link)
-  avatar: /images/boom.png
+  avatar: https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/boom.64f4r3497cs0.webp
 
   # Favicon (You can use local image or image external link)
-  favicon: /images/favicon.ico
+  favicon: https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/favicon.seuz59m8wy8.webp
 
   # Article image align position, value: left | center
   article_img_align: left
