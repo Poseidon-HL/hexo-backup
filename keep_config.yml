@@ -2,20 +2,20 @@
 #  Your basic info
 # ---------------------------------------------------------------------------------------
 base_info:
-  title: Learning Road Map
-  author: 浩澜
+  title: Note Book
+  author: HL
   url: https://keep.xpoet.cn/
   # Logo image (You can use local image, image external link or don’t fill)
-  logo_img: https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/image.49ib3ymiu280.webp
+  logo_img: https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/android-chrome-192x192.3e00498esc60.webp
 # ---------------------------------------------------------------------------------------
 # Theme style settings
 # ---------------------------------------------------------------------------------------
 style:
   # Theme primary color
-  primary_color: "#0066CC"
+  primary_color: "#000000"
 
   # Avatar (You can use local image or image external link)
-  avatar: https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/boom.64f4r3497cs0.webp
+  avatar: https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/android-chrome-192x192.3e00498esc60.webp
 
   # Favicon (You can use local image or image external link)
   favicon: https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220915/favicon.seuz59m8wy8.webp
@@ -38,7 +38,7 @@ style:
   first_screen:
     enable: true
     background_img: /images/bg.svg # You can use local image or image external link
-    description: Keep writing and Keep loving.
+    description: 🧐😴🤯
 
   # Scroll style settings
   scroll:
