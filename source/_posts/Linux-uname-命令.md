@@ -1,8 +1,9 @@
 ---
 title: Linux uname 命令
 date: 2022-09-09 16:28:56
-tags:
-categories: 
+tags: 
+ - Linux
+categories:
  - Linux 命令
 ---
 
