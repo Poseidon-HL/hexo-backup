@@ -2,7 +2,8 @@
 title: Linux find 命令
 date: 2022-09-11 13:42:16
 tags: 
-categories: 
+ - Linux
+categories:
  - Linux 命令
 ---
 
