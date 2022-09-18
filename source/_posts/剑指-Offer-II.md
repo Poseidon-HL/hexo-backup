@@ -2,7 +2,7 @@
 title: 剑指 Offer II
 date: 2022-09-16 16:33:41
 tags:
-sticky: 10
+sticky: 2
 ---
 
 - {% post_link 剑指-Offer-II-003-前-n-个数字二进制中-1-的个数  '剑指 Offer II 003. 前 n 个数字二进制中 1 的个数' %}
