@@ -6,6 +6,7 @@ tags:
  - 深度优先搜索
  - 二叉树
 categories: 剑指 Offer II
+sticky: 50
 ---
 
 # [剑指 Offer II 050\. 向下的路径节点之和](https://leetcode.cn/problems/6eUYwP/)

@@ -7,6 +7,7 @@ tags:
  - 字符串
  - 滑动窗口
 categories: 剑指 Offer II
+sticky: 14
 ---
 
 # [剑指 Offer II 014\. 字符串中的变位词](https://leetcode.cn/problems/MPnaiL/)

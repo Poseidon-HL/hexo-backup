@@ -6,7 +6,7 @@ tags:
 - 数组
 - 单调栈
 categories: 剑指 Offer II
-
+sticky: 38
 ---
 
 # [剑指 Offer II 038\. 每日温度](https://leetcode.cn/problems/iIQa4I/)

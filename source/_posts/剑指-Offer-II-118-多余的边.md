@@ -7,7 +7,7 @@ tags:
  - 并查集
  - 图
 categories: 剑指 Offer II
-
+sticky: 118
 ---
 
 # [剑指 Offer II 118\. 多余的边](https://leetcode.cn/problems/7LpjUW/)

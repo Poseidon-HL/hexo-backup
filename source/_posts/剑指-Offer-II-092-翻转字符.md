@@ -5,7 +5,7 @@ tags:
  - 字符串
  - 动态规划
 categories: 剑指 Offer II
-
+sticky: 92
 ---
 
 # [剑指 Offer II 092\. 翻转字符](https://leetcode.cn/problems/cyJERH/)

@@ -7,6 +7,7 @@ tags:
  - 二叉搜索树
  - 二叉树
 categories: 剑指 Offer II
+sticky: 54
 ---
 
 # [剑指 Offer II 054\. 所有大于等于节点的值之和](https://leetcode.cn/problems/w6cpku/)
@@ -28,7 +29,7 @@ Related Topics: [树](https://leetcode.cn/tag/tree/), [深度优先搜索](https
 
 **示例 1：**
 
-**![](https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2019/05/03/tree.png)**
+**![tree](https://cdn.staticaly.com/gh/Poseidon-HL/image-hosting@master/20220919/tree.4bfq4k2urb40.webp)**
 
 ```
 输入：root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]

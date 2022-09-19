@@ -7,6 +7,7 @@ tags:
  - 广度优先搜索
  - 二叉树
 categories: 剑指 Offer II
+sticky: 46
 ---
 
 # [剑指 Offer II 046\. 二叉树的右侧视图](https://leetcode.cn/problems/WNC0Lk/)

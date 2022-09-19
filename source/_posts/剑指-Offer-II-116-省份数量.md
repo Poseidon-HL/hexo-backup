@@ -7,7 +7,7 @@ tags:
  - 并查集
  - 图
 categories: 剑指 Offer II
-
+sticky: 116
 ---
 
 # [剑指 Offer II 116\. 省份数量](https://leetcode.cn/problems/bLyHh0/)

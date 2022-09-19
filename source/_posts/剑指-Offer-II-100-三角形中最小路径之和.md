@@ -5,6 +5,7 @@ tags:
  - 数组
  - 动态规划
 categories: 剑指 Offer II
+sticky: 100
 ---
 
 # [剑指 Offer II 100\. 三角形中最小路径之和](https://leetcode.cn/problems/IlPe0q/)

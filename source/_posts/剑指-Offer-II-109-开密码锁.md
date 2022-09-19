@@ -7,7 +7,7 @@ tags:
  - 哈希表
  - 字符串
 categories: 剑指 Offer II
-
+sticky: 109
 ---
 
 # [剑指 Offer II 109\. 开密码锁](https://leetcode.cn/problems/zlDJc7/)
