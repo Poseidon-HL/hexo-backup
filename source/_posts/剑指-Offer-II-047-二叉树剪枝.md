@@ -6,7 +6,6 @@ tags:
  - 深度优先搜索
  - 二叉树
 categories: 剑指 Offer II
-sticky: 47
 ---
 
 # [剑指 Offer II 047\. 二叉树剪枝](https://leetcode.cn/problems/pOCWxh/)

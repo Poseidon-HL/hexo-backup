@@ -6,7 +6,6 @@ tags:
  - 动态规划
  - 回溯
 categories: 剑指 Offer II
-sticky: 85
 ---
 
 # [剑指 Offer II 085\. 生成匹配的括号](https://leetcode.cn/problems/IDBivT/)

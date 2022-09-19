@@ -6,7 +6,6 @@ tags:
  - 广度优先搜索
  - 回溯
 categories: 剑指 Offer II
-sticky: 110
 ---
 
 # [剑指 Offer II 110\. 所有路径](https://leetcode.cn/problems/bP4bmD/)

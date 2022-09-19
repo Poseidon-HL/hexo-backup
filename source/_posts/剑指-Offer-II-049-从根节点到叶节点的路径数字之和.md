@@ -6,7 +6,6 @@ tags:
  - 深度优先搜索
  - 二叉树
 categories: 剑指 Offer II
-sticky: 49
 ---
 
 # [剑指 Offer II 049\. 从根节点到叶节点的路径数字之和](https://leetcode.cn/problems/3Etpl5/)

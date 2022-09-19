@@ -7,7 +7,6 @@ tags:
  - 广度优先搜索
  - 二叉树
 categories: 剑指 Offer II
-sticky: 45
 ---
 
 # [剑指 Offer II 045\. 二叉树最底层最左边的值](https://leetcode.cn/problems/LwUNpT/)

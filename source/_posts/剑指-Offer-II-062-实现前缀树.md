@@ -7,7 +7,6 @@ tags:
  - 哈希表
  - 字符串
 categories: 剑指 Offer II
-sticky: 62
 ---
 
 # [剑指 Offer II 062\. 实现前缀树](https://leetcode.cn/problems/QC3q1f/)

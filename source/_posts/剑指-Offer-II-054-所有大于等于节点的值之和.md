@@ -7,7 +7,6 @@ tags:
  - 二叉搜索树
  - 二叉树
 categories: 剑指 Offer II
-sticky: 54
 ---
 
 # [剑指 Offer II 054\. 所有大于等于节点的值之和](https://leetcode.cn/problems/w6cpku/)
