@@ -6,6 +6,8 @@ tags:
  - 广度优先搜索
  - 图
  - 拓扑排序
+categories: 剑指 Offer II
+
 ---
 
 # [剑指 Offer II 113\. 课程顺序](https://leetcode.cn/problems/QA2IGt/)

@@ -1,10 +1,13 @@
 ---
 title: Linux passwd 命令
 date: 2022-09-15 21:47:29
-tags:
+tags: 
+ - Linux
+categories:
+ - Linux 命令
 ---
 
-passwd用于改变用户密码
+passwd 用于改变用户密码
 
 ```
  - Change the password of the current user interactively:

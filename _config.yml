@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 😎😴🤯
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
+author: 👽
 language: en
 timezone: ''
 
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: keep
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -109,7 +109,7 @@ deploy:
 # Search
 ## See: https://github.com/theme-next/hexo-generator-searchdb
 search:
-  path: search.json
+  path: search.xml
   field: post
   content: true
-  format: striptags
+  format: html

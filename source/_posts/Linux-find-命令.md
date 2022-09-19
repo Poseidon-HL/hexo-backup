@@ -2,11 +2,12 @@
 title: Linux find 命令
 date: 2022-09-11 13:42:16
 tags: 
-categories: 
+ - Linux
+categories:
  - Linux 命令
 ---
 
-Linux find命令用于查找文件或目录
+Linux find 命令用于查找文件或目录
 
 ```
  - 通过表达式查找文件:
