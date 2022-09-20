@@ -3,7 +3,7 @@ title: go sync.Cond
 date: 2022-09-18 17:06:01
 tags: 
  - go
-categories: go Reference
+categories: go sync
 ---
 
 ### sync.Cond 使用场景
