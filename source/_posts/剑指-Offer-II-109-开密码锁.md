@@ -77,34 +77,71 @@ Related Topics: [广度优先搜索](https://leetcode.cn/tag/breadth-first-searc
 Language: **C++**
 
 ```c++
-        while (thisRound.size() != 0) {
-            int round = thisRound.size();
-            count++;
-            while (round > 0) {
-                string now = thisRound.front();
-                thisRound.pop();
-                for (int i = 0;i < 4;i++) {
-                    string addOne = cal(now,i,"+");
-                    string subOne = cal(now,i,"-");
-                    if (booms.find(addOne) == booms.end() && visited.find(addOne) == visited.end()) {
-        }
-        thisRound.push("0000");
-        visited.insert("0000");
-        count = 0;
-        if (target == "0000") {
-            return count;
-        if (booms.find("0000") != booms.end()) {
-            return count;
-        }
-            booms.insert(deadend);
-        }
-    int openLock(vector<string>& deadends, string target) {
-        queue<string> thisRound;
-        for (string deadend: deadends) {
-    set<string> visited;
-    set<string> booms;
-    int count = -1;
-        return src;
-    }
+class Solution {
+public:
+    string cal(string src, int idx, string op) {
+        if (op == "+") {
+            if (src[idx] == '9') {
+                src[idx] = '0';
+            } else {
+                src[idx] = char(int(src[idx]) + 1);
+            }
+        } else {
+            if (src[idx] == '0') {
+                src[idx] = '9';
+            } else {
+                src[idx] = char(int(src[idx]) - 1);
+            }
+        }
+        return src;
+    }
+
+    set<string> visited;
+    set<string> booms;
+    int count = -1;
+    int openLock(vector<string>& deadends, string target) {
+        queue<string> thisRound;
+        for (string deadend: deadends) {
+            booms.insert(deadend);
+        }
+        if (booms.find("0000") != booms.end()) {
+            return count;
+        }
+        count = 0;
+        if (target == "0000") {
+            return count;
+        }
+        thisRound.push("0000");
+        visited.insert("0000");
+        while (thisRound.size() != 0) {
+            int round = thisRound.size();
+            count++;
+            while (round > 0) {
+                string now = thisRound.front();
+                thisRound.pop();
+                for (int i = 0;i < 4;i++) {
+                    string addOne = cal(now,i,"+");
+                    string subOne = cal(now,i,"-");
+                    if (booms.find(addOne) == booms.end() && visited.find(addOne) == visited.end()) {
+                        if (addOne == target) {
+                            return count;
+                        }
+                        thisRound.push(addOne);
+                        visited.insert(addOne);
+                    }
+                    if (booms.find(subOne) == booms.end()  && visited.find(subOne) == visited.end()) {
+                        if (subOne == target) {
+                            return count;
+                        }
+                        thisRound.push(subOne);
+                        visited.insert(subOne);
+                    }
+                }
+                round--;
+            }
+        }
+        return -1;
+    }
+};
 
 ```

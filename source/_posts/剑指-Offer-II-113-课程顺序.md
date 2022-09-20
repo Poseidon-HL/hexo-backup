@@ -68,33 +68,41 @@ Related Topics: [深度优先搜索](https://leetcode.cn/tag/depth-first-search/
 Language: **C++**
 
 ```c++
-        for (int i = 0;i < prerequisites.size();i++) {
-            degree[prerequisites[i][0]]++;
-            graph[prerequisites[i][1]].push_back(prerequisites[i][0]);
-        }
-        queue<int> now;
-        for (int i = 0;i < degree.size();i++) {
-            if (degree[i] == 0) {
-                now.push(i);
-            }
-        }
-        while (now.size() != 0) {
-            int ele = now.front();
-            now.pop();
-            res.push_back(ele);
-            for (int i = 0;i < graph[ele].size(); i++) {
-                degree[graph[ele][i]]--;
-                if (degree[graph[ele][i]] == 0) {
-                    now.push(graph[ele][i]);
-                }
-            }
-        }
-    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
-        degree = vector<int> (numCourses);
-        graph = vector<vector<int>> (numCourses);
-    vector<int> degree;
-    vector<int> res;
-    vector<vector<int>> graph;
-class Solution {
+class Solution {
 public:
+    vector<int> degree;
+    vector<int> res;
+    vector<vector<int>> graph;
+    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
+        degree = vector<int> (numCourses);
+        graph = vector<vector<int>> (numCourses);
+        for (int i = 0;i < prerequisites.size();i++) {
+            degree[prerequisites[i][0]]++;
+            graph[prerequisites[i][1]].push_back(prerequisites[i][0]);
+        }
+        queue<int> now;
+        for (int i = 0;i < degree.size();i++) {
+            if (degree[i] == 0) {
+                now.push(i);
+            }
+        }
+        while (now.size() != 0) {
+            int ele = now.front();
+            now.pop();
+            res.push_back(ele);
+            for (int i = 0;i < graph[ele].size(); i++) {
+                degree[graph[ele][i]]--;
+                if (degree[graph[ele][i]] == 0) {
+                    now.push(graph[ele][i]);
+                }
+            }
+        }
+        for (int i = 0;i < degree.size();i++) {
+            if (degree[i] != 0) {
+                return vector<int>(0);
+            }
+        }
+        return res;
+    }
+};
 ```

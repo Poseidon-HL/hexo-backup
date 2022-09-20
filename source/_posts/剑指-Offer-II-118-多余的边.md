@@ -61,33 +61,38 @@ Related Topics: [深度优先搜索](https://leetcode.cn/tag/depth-first-search/
 Language: **C++**
 
 ```c++
-class Solution {
+class Solution {
 public:
-    vector<int> father;
-    int findFather(int i) {
-        if (i == father[i]) {
-            return i;
-        } else {
-            int f = findFather(father[i]);
-            father[i] = f;
-            return f;
-        }
+    vector<int> father;
+    int findFather(int i) {
+        if (i == father[i]) {
+            return i;
+        } else {
+            int f = findFather(father[i]);
+            father[i] = f;
+            return f;
+        }
 
-    }
-    void unionij(int i, int j) {
-        int Fi = findFather(i);
-        int Fj = findFather(j);
-        if (Fi != Fj) {
-            father[Fi] = Fj;
-        }
-    }
+    }
+    void unionij(int i, int j) {
+        int Fi = findFather(i);
+        int Fj = findFather(j);
+        if (Fi != Fj) {
+            father[Fi] = Fj;
+        }
+    }
 
-    vector<int> findRedundantConnection(vector<vector<int>>& edges) {
-        for (int i = 0;i <= edges.size();i++) {
-            father.push_back(i);
-        }
-        for (int i = 0;i < edges.size();i++) {
-            if (findFather(edges[i][0]) == findFather(edges[i][1])) {
-                return edges[i];
-            }
+    vector<int> findRedundantConnection(vector<vector<int>>& edges) {
+        for (int i = 0;i <= edges.size();i++) {
+            father.push_back(i);
+        }
+        for (int i = 0;i < edges.size();i++) {
+            if (findFather(edges[i][0]) == findFather(edges[i][1])) {
+                return edges[i];
+            }
+            unionij(edges[i][0],edges[i][1]);
+        }
+        return edges[edges.size() - 1];
+    }
+};
 ```

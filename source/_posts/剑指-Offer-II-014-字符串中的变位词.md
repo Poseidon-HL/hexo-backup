@@ -50,38 +50,40 @@ Related Topics: [哈希表](https://leetcode.cn/tag/hash-table/), [双指针](ht
 Language: **C++**
 
 ```c++
-class Solution {
+class Solution {
 public:
-    int tar[26];
-    int src[26];
-    bool isEqual() {
-        for (int i = 0;i < 26;i++) {
-            if(tar[i] != src[i]) {
-                return false;
-            }
-        }
-        return true;
-    }
+    int tar[26];
+    int src[26];
+    bool isEqual() {
+        for (int i = 0;i < 26;i++) {
+            if(tar[i] != src[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-    bool checkInclusion(string s1, string s2) {
-        if (s1.length() > s2.length()) {
-            return false;
-        }
-        for (int i = 0;i < s1.length();i++) {
-            src[s1[i] - 'a']++;
-            tar[s2[i] - 'a']++;
-        }
-        int start = 0;
-        int end = s1.length();
-        while (end < s2.length()) {
-            if (isEqual()) {
-                return true;
-            }
-            tar[s2[start++] - 'a']--;
-            tar[s2[end++] - 'a']++;
-        }
-        if (isEqual()) {
-            return true;
-        }
-        return false;
+    bool checkInclusion(string s1, string s2) {
+        if (s1.length() > s2.length()) {
+            return false;
+        }
+        for (int i = 0;i < s1.length();i++) {
+            src[s1[i] - 'a']++;
+            tar[s2[i] - 'a']++;
+        }
+        int start = 0;
+        int end = s1.length();
+        while (end < s2.length()) {
+            if (isEqual()) {
+                return true;
+            }
+            tar[s2[start++] - 'a']--;
+            tar[s2[end++] - 'a']++;
+        }
+        if (isEqual()) {
+            return true;
+        }
+        return false;
+    }
+};
 ```

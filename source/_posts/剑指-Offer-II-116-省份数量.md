@@ -62,27 +62,53 @@ Related Topics: [深度优先搜索](https://leetcode.cn/tag/depth-first-search/
 Language: **C++**
 
 ```c++
-        }
-    }
+class Solution {
+public:
+    vector<int> father;
+    void initFather(int N) {
+        for (int i = 0;i <= N; i++) {
+            father.push_back(i);
+        }
+    }
 
-    void unionij(int i, int j) {
-        int fi = findFather(i);
-        int fj = findFather(j);
-        if (fi != fj) {
-            father[fi] = fj;
-        }
-    }
+    int findFather(int i) {
+        if (i == father[i]) {
+            return i;
+        } else {
+            int f = findFather(father[i]);
+            father[i] = f;
+            return f;
+        }
+    }
 
-    int countFather() {
-        int count = 0;
-        for (int i = 1;i < father.size();i++) {
-            if (father[i] == i) {
-                count++;
-            }
-        }
-        return count;
-    }
+    void unionij(int i, int j) {
+        int fi = findFather(i);
+        int fj = findFather(j);
+        if (fi != fj) {
+            father[fi] = fj;
+        }
+    }
 
-    int findCircleNum(vector<vector<int>>& isConnected) {
-        initFather(isConnected.size());
+    int countFather() {
+        int count = 0;
+        for (int i = 1;i < father.size();i++) {
+            if (father[i] == i) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    int findCircleNum(vector<vector<int>>& isConnected) {
+        initFather(isConnected.size());
+        for (int i = 0;i < isConnected.size();i++) {
+            for (int j = 0;j < isConnected[i].size();j++) {
+                if (isConnected[i][j] == 1) {
+                    unionij(i + 1,j + 1);
+                }
+            }
+        }
+        return countFather();
+    }
+};
 ```

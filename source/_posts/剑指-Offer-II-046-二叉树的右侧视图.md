@@ -56,35 +56,43 @@ Related Topics: [树](https://leetcode.cn/tag/tree/), [深度优先搜索](https
 Language: **C++**
 
 ```c++
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
 public:
-    // 层序遍历 用队列
-    vector<int> res;
-    vector<int> rightSideView(TreeNode* root) {
-        queue<TreeNode*> tmp;
-        tmp.push(root);
-        while (tmp.size() != 0 && root != nullptr) {
-            int num = tmp.size();
-            while (num) {
-                TreeNode* topEle = tmp.front();
-                tmp.pop();
-                if (num == 1) {
-                    res.push_back(topEle -> val);
-                }
-                if (topEle -> left != nullptr) {
-                    tmp.push(topEle -> left);
-                }
-                if (topEle -> right != nullptr) {
-                    tmp.push(topEle -> right);
-                }
-                num--;
-            }
-        }
+    // 层序遍历 用队列
+    vector<int> res;
+    vector<int> rightSideView(TreeNode* root) {
+        queue<TreeNode*> tmp;
+        tmp.push(root);
+        while (tmp.size() != 0 && root != nullptr) {
+            int num = tmp.size();
+            while (num) {
+                TreeNode* topEle = tmp.front();
+                tmp.pop();
+                if (num == 1) {
+                    res.push_back(topEle -> val);
+                }
+                if (topEle -> left != nullptr) {
+                    tmp.push(topEle -> left);
+                }
+                if (topEle -> right != nullptr) {
+                    tmp.push(topEle -> right);
+                }
+                num--;
+            }
+        }
+        
+        return res;
+    }
+};
 ```

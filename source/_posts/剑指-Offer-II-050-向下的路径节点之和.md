@@ -52,35 +52,39 @@ Related Topics: [树](https://leetcode.cn/tag/tree/), [深度优先搜索](https
 Language: **C++**
 
 ```c++
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
+class Solution {
 public:
-    int count = 0;
-    long long target = target;
-    vector<long long> DFS(TreeNode* root) {
-        vector<long long> res;
-        if (root == nullptr) {
-            return res;
-        }
-        vector<long long> leftRes = DFS(root -> left);
-        vector<long long> rightRes = DFS(root -> right);
-        for (int i = 0;i < leftRes.size();i++) {
-            if (leftRes[i] + root -> val == target) {
-                count++;
-            }
-            res.push_back(leftRes[i] + root -> val);
-        }
-        for (int i = 0;i < rightRes.size();i++) {
-            if (rightRes[i] + root -> val == target) {
-                count++;
-            }
-            res.push_back(rightRes[i] + root -> val);
+    int count = 0;
+    long long target = target;
+    vector<long long> DFS(TreeNode* root) {
+        vector<long long> res;
+        if (root == nullptr) {
+            return res;
+        }
+        vector<long long> leftRes = DFS(root -> left);
+        vector<long long> rightRes = DFS(root -> right);
+        for (int i = 0;i < leftRes.size();i++) {
+            if (leftRes[i] + root -> val == target) {
+                count++;
+            }
+            res.push_back(leftRes[i] + root -> val);
+        }
+        for (int i = 0;i < rightRes.size();i++) {
+            if (rightRes[i] + root -> val == target) {
+                count++;
+            }
+            res.push_back(rightRes[i] + root -> val);
+        }
+        if (root -> val == target) {
+            count++;
+        }
+        res.push_back(root -> val);
+        return res;
+    }
+    int pathSum(TreeNode* root, int targetSum) {
+        target = targetSum;
+        DFS(root);
+        return count;
+    }
+};
 ```

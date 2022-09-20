@@ -53,33 +53,38 @@ Related Topics: [树](https://leetcode.cn/tag/tree/), [深度优先搜索](https
 Language: **C++**
 
 ```c++
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
-public:
-    int findBottomLeftValue(TreeNode* root) {
-        queue<TreeNode*> level;
-        level.push(root);
-        int res;
-        while (level.size() != 0) {
-            int levelNum = level.size();
-            res = level.front() -> val;
-            while (levelNum > 0) {
-                levelNum--;
-                TreeNode* frontNode = level.front();
-                if (frontNode -> left != nullptr) {
-                    level.push(frontNode -> left);
-                }
-                if (frontNode -> right != nullptr) {
-                    level.push(frontNode -> right);
-                }
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
 /**
- * Definition for a binary tree node.
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    void Traverse(TreeNode* root,int level,int &maxlevel,int &finalData)
+    {
+        if(root == NULL)
+            return ;
+        if(level > maxlevel)
+        {
+            finalData = root -> val;
+            maxlevel = level;
+        }
+        Traverse(root -> left,level + 1,maxlevel,finalData);
+        Traverse(root -> right,level + 1,maxlevel,finalData);
+        return ;
+    }
+
+    int findBottomLeftValue(TreeNode* root) {
+        if(root == NULL)
+            return 0;
+        int finalData = root -> val;
+        int maxlevel = 0;
+        Traverse(root,0,maxlevel,finalData);
+        return finalData;
+    }
+};
 ```

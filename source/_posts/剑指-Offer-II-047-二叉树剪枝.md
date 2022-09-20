@@ -63,35 +63,41 @@ Related Topics: [树](https://leetcode.cn/tag/tree/), [深度优先搜索](https
 Language: **C++**
 
 ```c++
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
-class Solution {
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
 public:
-    bool DFS(TreeNode* root) {
-        if (root == nullptr) {
-            return true;
-        }
-        bool leftRes = DFS(root -> left);
-        bool rightRes = DFS(root -> right);
-        if (leftRes) {
-            root -> left = nullptr;
-        }
-        if (rightRes) {
-            root -> right = nullptr;
-        }
-        if (leftRes && rightRes && root -> val == 0) {
-            return true;
-        }
-        return false;
-    }
-    TreeNode* pruneTree(TreeNode* root) {
-        if (DFS(root)) {
-            return nullptr;
-        }
-        return root;
-    }
+    bool DFS(TreeNode* root) {
+        if (root == nullptr) {
+            return true;
+        }
+        bool leftRes = DFS(root -> left);
+        bool rightRes = DFS(root -> right);
+        if (leftRes) {
+            root -> left = nullptr;
+        }
+        if (rightRes) {
+            root -> right = nullptr;
+        }
+        if (leftRes && rightRes && root -> val == 0) {
+            return true;
+        }
+        return false;
+    }
+    TreeNode* pruneTree(TreeNode* root) {
+        if (DFS(root)) {
+            return nullptr;
+        }
+        return root;
+    }
 };
 ```

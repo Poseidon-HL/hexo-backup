@@ -60,34 +60,58 @@ trie.search("app");     // 返回 True
 Language: **C++**
 
 ```c++
-    bool search(string word) {
-        Trie* node = this;
-        for (char c : word) {
-            int index = c - 'a';
-            if (node -> children[index] == nullptr) {
-                return false;
-            }
-            node = node -> children[index];
-        }
-    }
-    
-    /** Returns if the word is in the trie. */
-            node = node -> children[index];
-        }
-        node -> isEnd = true;
-            if (node -> children[index] == nullptr) {
-                node -> children[index] = new Trie();
-            }
-        for (char c : word) {
-            int index = c - 'a';
-    /** Inserts a word into the trie. */
-    void insert(string word) {
-        Trie* node = this;
-    bool isEnd;
-    Trie():children(26),isEnd(false) {}
-    
+class Trie {
 public:
-    /** Initialize your data structure here. */
-    vector<Trie*> children;
-class Trie {
+    /** Initialize your data structure here. */
+    vector<Trie*> children;
+    bool isEnd;
+    Trie():children(26),isEnd(false) {}
+    
+    /** Inserts a word into the trie. */
+    void insert(string word) {
+        Trie* node = this;
+        for (char c : word) {
+            int index = c - 'a';
+            if (node -> children[index] == nullptr) {
+                node -> children[index] = new Trie();
+            }
+            node = node -> children[index];
+        }
+        node -> isEnd = true;
+    }
+    
+    /** Returns if the word is in the trie. */
+    bool search(string word) {
+        Trie* node = this;
+        for (char c : word) {
+            int index = c - 'a';
+            if (node -> children[index] == nullptr) {
+                return false;
+            }
+            node = node -> children[index];
+        }
+        return node -> isEnd;
+    }
+    
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    bool startsWith(string prefix) {
+        Trie* node = this;
+        for (char c : prefix) {
+            int index = c - 'a';
+            if (node -> children[index] == nullptr) {
+                return false;
+            }
+            node = node -> children[index];
+        }
+        return true;
+    }
+};
+
+/**
+ * Your Trie object will be instantiated and called as such:
+ * Trie* obj = new Trie();
+ * obj->insert(word);
+ * bool param_2 = obj->search(word);
+ * bool param_3 = obj->startsWith(prefix);
+ */
 ```
