@@ -18,7 +18,7 @@ Related Topics: [贪心](https://leetcode.cn/tag/greedy/), [字符串](https://l
 
 给定两个整数 `a` 和 `b` ，返回 **任意** 字符串 `s` ，要求满足：
 
-*   `s` 的长度为 `a + b`，且正好包含`<font color="#c7254e"><font face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size:12.600000381469727px"><span style="caret-color:#c7254e"><span style="background-color:#f9f2f4">a</span></span></span></font></font>` 个 `'a'` 字母与 `<font color="#c7254e"><font face="Menlo, Monaco, Consolas, Courier New, monospace"><span style="font-size:12.600000381469727px"><span style="caret-color:#c7254e"><span style="background-color:#f9f2f4">b</span></span></span></font></font>` 个 `'b'` 字母；
+*   `s` 的长度为 `a + b`，且正好包含`a` 个 `'a'` 字母与 `b` 个 `'b'` 字母；
 *   子串 `'aaa'` 没有出现在 `s` 中；
 *   子串 `'bbb'` 没有出现在 `s` 中。
 
